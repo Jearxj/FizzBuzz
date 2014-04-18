@@ -9,17 +9,21 @@ $(document).ready(function() {
 
     for (var i = 1; i <= number; i++) {
         console.log(i);
-        if (i % 3 === 0) {
-            console.log("fizz");
-            $(".container").append("fizz ");
-        } else if (i % 5 === 0) {
-            console.log("buzz");
-            $(".container").append("buzz ");
-        } else if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzbuzz");
-            $(".container").append("fizzbuzz ");
+        if (i < 101) {
+            if (i % 3 === 0) {
+                console.log("fizz");
+                $(".container").append("fizz ");
+            } else if (i % 5 === 0) {
+                console.log("buzz");
+                $(".container").append("buzz ");
+            } else if (i % 3 === 0 && i % 5 === 0) {
+                console.log("fizzbuzz");
+                $(".container").append("fizzbuzz ");
+            } else {
+                $(".container").append(i + " ");
+            }
         } else {
-            $(".container").append(i + " ");
-        }
+            $(".container").empty(i);
+        }      
     }
 })
