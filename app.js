@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     for (var i = 1; i <= number; i++) {
         console.log(i);
-        if (i < 101) {
+        if (i <= 100) {
             if (i % 3 === 0) {
                 console.log("fizz");
                 $(".container").append("fizz ");
