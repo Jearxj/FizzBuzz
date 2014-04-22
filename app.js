@@ -1,20 +1,6 @@
 $(document).ready(function() {
  var count = function (number) {
-     alert(number);
- }
- alert(8);
-    
- do {
-  var number = prompt("Please enter a number from 1 - 100");
-  console.log("prompt is working");
-    if (number < 1) {
-        alert("Please enter a number greater than 1!");
-    } else if (number > 100) {
-        alert("Please enter a number less than 100!");
-    }
- } while (number < 1 || number > 100); 
-     
- for (var i = 1; i <= number; i++) {
+      for (var i = 1; i <= number; i++) {
      console.log(i);
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("fizzbuzz");
@@ -28,5 +14,19 @@ $(document).ready(function() {
         } else {
             $(".container").append(i + " ");
         }     
+    }
  }
+    
+ do {
+  var number = prompt("Please enter a number from 1 - 100");
+  console.log("prompt is working");
+    if (number < 1) {
+        alert("Please enter a number greater than 1!");
+    } else if (number > 100) {
+        alert("Please enter a number less than 100!");
+    }
+ } while (number < 1 || number > 100); 
+     
+ count(number);
+    
 })
