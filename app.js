@@ -7,10 +7,8 @@ $(document).ready(function() {
     } else if (number > 100) {
         alert("Please enter a number less than 100!");
     }
- } while (number < 1 || number > 100) {
-        var number = prompt("Please enter a number from 1 - 100");
-    }
- 
+ } while (number < 1 || number > 100); 
+     
  for (var i = 1; i <= number; i++) {
      console.log(i);
         if (i % 3 === 0 && i % 5 === 0) {
