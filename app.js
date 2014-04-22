@@ -1,4 +1,9 @@
 $(document).ready(function() {
+ var count = function (number) {
+     alert(number);
+ }
+ alert(8);
+    
  do {
   var number = prompt("Please enter a number from 1 - 100");
   console.log("prompt is working");
