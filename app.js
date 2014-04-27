@@ -1,19 +1,24 @@
 $(document).ready(function() {
  var count = function (number) {
-      for (var i = 1; i <= number; i++) {
-     console.log(i);
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzbuzz");
-            $(".container").append("fizzbuzz ");
-        } else if (i % 3 === 0) {
+    for (var i = 1; i <= number; i++) {
+        console.log(i);
+        if (i !== 1) {
+            $(".container").append(", "); 
+        }
+        var didPrint = false;   
+        if (i % 3 === 0) {
+            didPrint = true;
             console.log("fizz");
-            $(".container").append("fizz ");
-        } else if (i % 5 === 0) {
+            $(".container").append("fizz");
+        } 
+        if (i % 5 === 0) {
+            didPrint = true;
             console.log("buzz");
-            $(".container").append("buzz ");
-        } else {
-            $(".container").append(i + " ");
-        }     
+            $(".container").append("buzz");
+        } 
+        if (didPrint === false) {
+            $(".container").append(i);
+        }
     }
  }
     
